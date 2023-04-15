@@ -13,22 +13,29 @@ const { NotImplementedError } = require("../extensions/index.js");
  *
  */
 
-function getSumOfDigits(/* n */) {
-  throw new NotImplementedError("Not implemented");
+function getSumOfDigits(n) {
+  // throw new NotImplementedError("Not implemented");
   // remove line with error and write your code here
-  // let array = ("" + n).split("").map(Number);
-  // let res = 0;
-  // for (let i = 0; i < array.length; i++) {
-  //   res += array[i];
-  //   return res;
-  //   //     if (res > 9) {
-  //   //   let res2 = 0;
-  //   //   let array2 = Array.from(res.toString(), Number);
-  //   //   for (let j = 0; j < array2.length; j++) res2 += array2[j];
-  //   //   return res2;
-  //   // }
-  // }
+  debugger;
+  let array = ("" + n).split("").map(Number);
+  let res = 0;
+
+  console.log(array);
+  for (let i = 0; i < array.length; i++) {
+    res += array[i];
+    console.log(array[i]);
+    if (res > 9) {
+      let array2 = ("" + n).split("").map(Number);
+      console.log(array2);
+      for (let j = 0; j < array2.length; j++) {
+        res = 0;
+        res += array2[j];
+      }
+    }
+  }
+  return res;
 }
+getSumOfDigits(91);
 module.exports = {
   getSumOfDigits,
 };
