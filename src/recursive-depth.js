@@ -2,7 +2,7 @@ const { NotImplementedError } = require("../extensions/index.js");
 
 /**
  * Implement class DepthCalculator with method calculateDepth
- * that calculates deoth of nested array
+ * that calculates depth of nested array
  *
  * @example
  *
@@ -19,6 +19,7 @@ class DepthCalculator {
     Array.isArray(arr) ? 1 + Math.max(0, ...arr.map(this.calculateDepth)) : 0;
 }
 
-module.exports = {
+const extracted = {
   DepthCalculator,
 };
+module.exports = extracted;
