@@ -19,7 +19,6 @@ function isMAC48Address(n) {
   // remove line with error and write your code here
   let valid = true;
   for (let i = 0; i < n.length; i++) {
-    //64:A2:C7:B0:D3:B2 - пример правильного mac-адреса
     let regexp = /^[0-9a-f]{2}(-[0-9a-f]{2}){5}$/i;
     if (!regexp.test(n)) {
       valid = false;
